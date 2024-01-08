@@ -69,6 +69,22 @@ function start(){
         
     }
 
+    // CORRECT WIDTHS / HEIGHTS FOR MOBILE
+    if (window.innerWidth < 1440){
+        var new_width = "250px";
+        var new_height = "250px";
+
+        var pages = document.getElementsByClassName('page');
+        for (i = 0; i < pages.length; i++){ pages[i].style.width = new_width; }
+
+        var containers = document.getElementsByClassName('container');
+        for (i = 0; i < containers.length; i++){ containers[i].style.width = new_width; containers[i].style.height = new_height; }
+
+        var fade_out_container = document.getElementById('display_fade');
+        fade_out_container.style.width = new_width;
+        fade_out_container.style.height = new_height;
+    }
+
 }
 
 function paste_to_search( txt ) {
