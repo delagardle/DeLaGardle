@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" media="only screen and (max-width: 480px)" href="styles_mobile.css">
     <style type="text/css">
-        :root{ --image_width: 500px; --image_height: 500px;}
+        :root   {   --image_width: 500px; --image_height: 500px;
+                    --image_width_mobile: 250px; --image_height_mobile: 250px;
+                }
     </style>
 
     <title>Lärarle</title>
@@ -17,7 +20,7 @@
 </head>
 <body onload="start();">
     <div class="page">
-        <div style="color: #dadada;font-size: 40px;">
+        <div class="title">
             De La Gard<span style="color: lightcoral;">le</span>
         </div>
     </div>

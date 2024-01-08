@@ -13,8 +13,9 @@ body {
 
 div.title {
     color: #dadada;
-    font-size: 40px;
+    font-size: 24px;
 }
+
 
 .page {
     display: flex;
@@ -22,7 +23,7 @@ div.title {
 
     align-items: center;
 
-    width: var(--image_width);
+    width: var(--image_width_mobile);
 
 }
 
@@ -31,8 +32,8 @@ div.title {
 
     flex-direction: row;
 
-    width: var(--image_width);
-    height: var(--image_height);
+    width: var(--image_width_mobile);
+    height: var(--image_height_mobile);
 
     overflow: hidden;
 /*    border: 4px outset #6a6a6a;*/
@@ -46,7 +47,7 @@ div.title {
     justify-content: center;
     align-items: center;
 
-    font-size: 24px;
+    font-size: 18px;
 
     z-index: 10;
 
@@ -57,8 +58,8 @@ div.title {
     -o-transition: opacity 500ms linear; 
     -ms-transition: opacity 500ms linear;
 
-    width: var(--image_width);
-    height: var(--image_height);
+    width: var(--image_width_mobile);
+    height: var(--image_height_mobile);
 }
 
 .image_style{
@@ -114,7 +115,7 @@ div.title {
     padding: .5rem;
 
     display: none;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .suggestions_list li:hover {
@@ -123,12 +124,12 @@ div.title {
 
 
 .guess_input {
-    width: 494px;
+    width: 247px;
     height: 5%;
 
     margin-top: 4px;
 
-    font-size: 24px;
+    font-size: 18px;
     color: #dadada;
     background: #6b6b6b;
 
@@ -136,9 +137,9 @@ div.title {
 }
 
 .guess_button {
-    width: 500px;
+    width: 250px;
     height: 5%;
-    font-size: 24px;
+    font-size: 18px;
 
     background: #6b6b6b;
     color: #dadada;
