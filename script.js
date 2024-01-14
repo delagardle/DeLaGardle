@@ -60,7 +60,7 @@ const startDate = new Date(2024, 0, 6)
 var todayDate = new Date()
 
 var seed = Math.ceil(Math.abs((startDate - todayDate) / (86400 * 1000)))
-var rng = new RNG();
+var rng = new RNG(seed);
 
 
 
