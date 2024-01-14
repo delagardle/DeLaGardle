@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta http-equiv='cache-control' content='no-cache'> 
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
@@ -10,21 +11,24 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" media="only screen and (max-width: 480px)" href="styles_mobile.css">
     <style type="text/css">
-        :root   {   --image_width: 500px; --image_height: 500px;
+        :root   {   --image_width: 400px; --image_height: 400px;
                     --image_width_mobile: 280px; --image_height_mobile: 280px;
                 }
     </style>
 
-    <title>Lärarle</title>
+    <title>De La Gardle</title>
 
     <script type="text/javascript" src="script.js"></script>
 
     <script type="text/javascript"></script>
 </head>
 <body onload="start();">
-    <div class="page">
+    <div id="title_page" class="page">
         <div class="title">
-            De La Gard<span style="color: lightcoral;">le</span>
+            De La Gard<span class="coloured">le</span>
+        </div>
+        <div id="day">
+            
         </div>
     </div>
         
@@ -35,12 +39,28 @@
             <img class="image_style" id="image1">
         </div>
 
-        <div id="input_container" class="search">
-            <input class="guess_input" id="input_box" type="text" spellcheck="false" placeholder="Search..." onkeyup="filter_search()">
-            <ul id="suggestions" class="suggestions_list"></ul>
+        <div class="guesses_container">
+        </div>
+
+        <input id="input_box" class="guess_input" type="text" spellcheck="false" placeholder="Search..." onkeyup="filter_search()">
+
+        <div class="search">
+            <ul id="suggestions" class="suggestions_list"></ul>    
         </div>
 
         <button id="submit_btn" class="guess_button" onclick="guess()">Submit</button>
+
+        <div class="result">
+            
+        </div>
+
+        <div class="small_clickable" id="submit_image" onclick="submit_image()">
+            Submit an Image
+        </div>
+
+        <div class="small_clickable" id="buy_coffee" onclick="buy_coffee()">
+            <!-- Buy me a Coffee -->
+        </div>
     </div>
 </body>
 </html>

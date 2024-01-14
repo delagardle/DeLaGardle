@@ -13,9 +13,8 @@ body {
 
 div.title {
     color: #dadada;
-    font-size: 24px;
+    font-size: 40px;
 }
-
 
 .page {
     display: flex;
@@ -47,35 +46,68 @@ div.title {
     justify-content: center;
     align-items: center;
 
-    font-size: 18px;
+    font-size: 24px;
 
     z-index: 10;
 
     opacity: 0;
-    transition: opacity 500ms linear;
-    -moz-transition: opacity 500ms linear;
-    -webkit-transition: opacity 500ms linear;
-    -o-transition: opacity 500ms linear; 
-    -ms-transition: opacity 500ms linear;
+    transition: opacity 1500ms linear;
+    -moz-transition: opacity 1500ms linear;
+    -webkit-transition: opacity 1500ms linear;
+    -o-transition: opacity 1500ms linear; 
+    -ms-transition: opacity 1500ms linear;
 
     width: var(--image_width_mobile);
     height: var(--image_height_mobile);
 }
 
-.image_style{
+.image_style_mobile {
     position: relative;
 
     width: 100%;
     height: 100%;
 
     z-index: 1;
+
+    transform: scale(5.0);
+}
+
+.image_style_transitions_mobile {
+    transition: transform 250ms ease-in;
+    -moz-transition: transform 250ms ease-in;
+    -webkit-transition: transform 250ms ease-in;
+    -o-transition: transform 250ms ease-in;
+    -ms-transition: transform 250ms ease-in;
 }
 
 
-.search {
+
+.guesses_container {
+    display:flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2% 0;
+    padding: 0 5%;
+}
+
+.guesses_container div {
+/*    text-align: center;*/
+    justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background: white;
+}
+
+
+
+.search {
+ /*   align-items: center;
+    display: flex;
+    flex-direction: column;*/
 
     width: 100%;
 }
@@ -86,7 +118,7 @@ div.title {
     background: white;
 
     height: auto;
-    width: 350px;
+    width: 70%;
     z-index: 8000;
 
     margin-top: 2px;
@@ -99,19 +131,12 @@ div.title {
     padding: 0;
     margin: 0;
 
-   /* margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;*/
-
     position: absolute;
-    top: 600px;
-    left: 470px;
 }
 
 .suggestions_list li {
     color: red;
 
-/*    border: 1px solid gray;*/
     padding: .5rem;
 
     display: none;
@@ -123,27 +148,83 @@ div.title {
 }
 
 
+
+
 .guess_input {
-    width: var(--image_width_mobile);
+    width: 272px;
     height: 5%;
 
     margin-top: 4px;
 
-    font-size: 18px;
+    font-size: 24px;
     color: #dadada;
     background: #6b6b6b;
 
-/*    padding-left: 4px;*/
+    padding-left: 4px;
 }
 
 .guess_button {
     width: var(--image_width_mobile);
     height: 5%;
-    font-size: 18px;
+    font-size: 24px;
 
     background: #6b6b6b;
     color: #dadada;
 
     margin-top: 8px;
+}
+
+.guess_button:hover {
+    background: #595959;
+    cursor: pointer;
+}
+
+
+
+.result {
+    position: relative;
+
+    flex-direction: row;
+    width: 100%;
+
+    text-align: center;
+
+    display: none;
+
+    font-size: 18px;
+}
+
+.result_won {
+    background: green;
+
+    display: block;
+}
+
+.result_lost {
+    background: red;
+
+    display: block;
+}
+
+
+.small_clickable {
+    position: absolute;
+
+    bottom: 10px;
+
+    font-size: 16px;
+    color: #7a7a7a;
+}
+
+#submit_image {_mobile
+    left: 20px;
+}
+#buy_coffee {
+    right: 20px;
+}
+
+.small_clickable:hover {
+    color: #686868;
+    cursor: pointer;
 }
 

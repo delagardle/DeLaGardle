@@ -1,6 +1,5 @@
 html {
     font-family: Helvetica, Roboto, sans-serif;
-/*    box-sizing: border-box;*/
 }
 
 body {
@@ -14,6 +13,15 @@ body {
 div.title {
     color: #dadada;
     font-size: 40px;
+}
+
+div #day {
+    color: #dadada;
+    font-size: 30px;
+}
+
+span.coloured {
+    color: lightcoral;
 }
 
 .page {
@@ -51,30 +59,63 @@ div.title {
     z-index: 10;
 
     opacity: 0;
-    transition: opacity 500ms linear;
-    -moz-transition: opacity 500ms linear;
-    -webkit-transition: opacity 500ms linear;
-    -o-transition: opacity 500ms linear; 
-    -ms-transition: opacity 500ms linear;
+    transition: opacity 1500ms linear;
+    -moz-transition: opacity 1500ms linear;
+    -webkit-transition: opacity 1500ms linear;
+    -o-transition: opacity 1500ms linear; 
+    -ms-transition: opacity 1500ms linear;
 
     width: var(--image_width);
     height: var(--image_height);
 }
 
-.image_style{
+.image_style {
     position: relative;
 
     width: 100%;
     height: 100%;
 
     z-index: 1;
+
+    transform: scale(5.0);
+}
+
+.image_style_transitions {
+    transition: transform 250ms ease-in;
+    -moz-transition: transform 250ms ease-in;
+    -webkit-transition: transform 250ms ease-in;
+    -o-transition: transform 250ms ease-in;
+    -ms-transition: transform 250ms ease-in;
 }
 
 
-.search {
+
+.guesses_container {
+    display:flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2% 0;
+    padding: 0 5%;
+}
+
+.guesses_container div {
+/*    text-align: center;*/
+    justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background: white;
+}
+
+
+
+.search {
+ /*   align-items: center;
+    display: flex;
+    flex-direction: column;*/
 
     width: 100%;
 }
@@ -85,7 +126,7 @@ div.title {
     background: white;
 
     height: auto;
-    width: 350px;
+    width: 25%;
     z-index: 8000;
 
     margin-top: 2px;
@@ -98,23 +139,16 @@ div.title {
     padding: 0;
     margin: 0;
 
-   /* margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;*/
-
     position: absolute;
-    top: 600px;
-    left: 470px;
 }
 
 .suggestions_list li {
-    color: red;
+    color: #AD2513;
 
-/*    border: 1px solid gray;*/
     padding: .5rem;
 
     display: none;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .suggestions_list li:hover {
@@ -122,8 +156,10 @@ div.title {
 }
 
 
+
+
 .guess_input {
-    width: 494px;
+    width: 392px;
     height: 5%;
 
     margin-top: 4px;
@@ -136,7 +172,7 @@ div.title {
 }
 
 .guess_button {
-    width: 500px;
+    width: var(--image_width);
     height: 5%;
     font-size: 24px;
 
@@ -144,5 +180,61 @@ div.title {
     color: #dadada;
 
     margin-top: 8px;
+}
+
+.guess_button:hover {
+    background: #595959;
+    cursor: pointer;
+}
+
+
+
+.result {
+    position: relative;
+
+    flex-direction: row;
+    width: 100%;
+
+    text-align: center;
+
+    display: none;
+
+    font-size: 18px;
+
+    padding: 2px 0;
+}
+
+.result_won {
+    background: #1BD618;
+
+    display: block;
+}
+
+.result_lost {
+    background: #AD2513;
+
+    display: block;
+}
+
+
+.small_clickable {
+    position: absolute;
+
+    bottom: 10px;
+
+    font-size: 16px;
+    color: #7a7a7a;
+}
+
+#submit_image {
+    left: 20px;
+}
+#buy_coffee {
+    right: 20px;
+}
+
+.small_clickable:hover {
+    color: #686868;
+    cursor: pointer;
 }
 
